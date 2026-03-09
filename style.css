@@ -1,0 +1,426 @@
+/* =============================================
+   Prince of Piece - Retro Website Stylesheet
+   "Best viewed in Netscape Navigator 3.0+"
+   ============================================= */
+
+body {
+  background-color: #000080;
+  background-image: url("data:image/svg+xml,%3Csvg width='8' height='8' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='1' height='1' x='0' y='0' fill='%23000066'/%3E%3Crect width='1' height='1' x='4' y='4' fill='%23000066'/%3E%3C/svg%3E");
+  color: #FFFF00;
+  font-family: "Times New Roman", serif;
+  margin: 0;
+  padding: 0;
+}
+
+a { color: #00FFFF; }
+a:visited { color: #FF00FF; }
+a:hover { color: #FF0000; }
+
+/* ---- LAYOUT ---- */
+.main-table {
+  width: 780px;
+  margin: 0 auto;
+  border: 3px ridge #C0C0C0;
+  background-color: #000033;
+}
+
+/* ---- HEADER ---- */
+.header {
+  background: linear-gradient(to right, #000033, #000080, #000033);
+  text-align: center;
+  padding: 10px;
+  border-bottom: 3px ridge #C0C0C0;
+}
+.header h1 {
+  font-family: "Comic Sans MS", "Times New Roman", cursive;
+  color: #FFD700;
+  font-size: 36px;
+  text-shadow: 2px 2px #FF0000;
+  margin: 5px;
+}
+.header h2 {
+  color: #00FF00;
+  font-size: 18px;
+  font-style: italic;
+  margin: 5px;
+}
+.star {
+  color: #FFD700;
+  margin: 2px;
+}
+
+/* ---- MARQUEE ---- */
+.marquee-bar {
+  background-color: #800000;
+  color: #FFFF00;
+  padding: 5px;
+  font-size: 14px;
+  border-top: 2px inset #C0C0C0;
+  border-bottom: 2px inset #C0C0C0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.marquee-bar .scroll-text {
+  display: inline-block;
+  animation: marquee 20s linear infinite;
+}
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* ---- NAVIGATION ---- */
+.navbar {
+  background-color: #333399;
+  text-align: center;
+  padding: 8px;
+  border-bottom: 3px ridge #C0C0C0;
+}
+.navbar a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 4px 12px;
+  border: 2px outset #9999CC;
+  background-color: #666699;
+  font-size: 14px;
+  margin: 2px;
+  display: inline-block;
+}
+.navbar a:hover,
+.navbar a.nav-active {
+  border-style: inset;
+  background-color: #555588;
+  color: #FFFF00;
+}
+
+/* ---- CONTENT AREA ---- */
+.content-area {
+  display: flex;
+}
+
+/* ---- SIDEBAR ---- */
+.sidebar {
+  width: 180px;
+  min-width: 180px;
+  background-color: #001a33;
+  border-right: 3px ridge #C0C0C0;
+  padding: 10px;
+  font-size: 13px;
+  vertical-align: top;
+}
+.sidebar h3 {
+  color: #FF6600;
+  font-size: 16px;
+  border-bottom: 1px dashed #FF6600;
+  padding-bottom: 4px;
+}
+.sidebar ul {
+  list-style-type: square;
+  padding-left: 20px;
+  color: #00FF00;
+}
+.sidebar li { margin: 6px 0; }
+.sidebar a { color: #00FFFF; font-size: 12px; }
+
+/* ---- MAIN CONTENT ---- */
+.main-content {
+  flex: 1;
+  padding: 15px;
+}
+.main-content h2 {
+  color: #FF6600;
+  border-bottom: 2px solid #FF6600;
+  padding-bottom: 4px;
+}
+
+/* ---- PUZZLE TABLE ---- */
+.puzzle-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+}
+.puzzle-table th {
+  background-color: #333399;
+  color: #FFFFFF;
+  border: 2px ridge #C0C0C0;
+  padding: 6px;
+  font-size: 14px;
+}
+.puzzle-table td {
+  border: 1px solid #666699;
+  padding: 8px;
+  color: #CCCCCC;
+  font-size: 13px;
+  vertical-align: top;
+}
+.puzzle-table tr:nth-child(even) { background-color: #000044; }
+.puzzle-table tr:nth-child(odd) { background-color: #000022; }
+
+/* ---- PUZZLE DETAIL CARDS ---- */
+.puzzle-card {
+  border: 2px ridge #C0C0C0;
+  background-color: #000044;
+  margin: 15px 0;
+  padding: 0;
+}
+.puzzle-card-title {
+  background: linear-gradient(to right, #333399, #000066);
+  color: #FFD700;
+  padding: 8px 12px;
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom: 2px ridge #C0C0C0;
+}
+.puzzle-card-body {
+  padding: 12px;
+  color: #CCCCCC;
+  line-height: 1.6;
+}
+.puzzle-card-body .specs {
+  margin: 10px 0;
+  border: 1px solid #666699;
+  padding: 8px;
+  background-color: #000033;
+  font-size: 12px;
+}
+.puzzle-card-body .specs td {
+  padding: 3px 12px 3px 0;
+  color: #CCCCCC;
+  font-size: 12px;
+  border: none;
+}
+.puzzle-card-body .specs b {
+  color: #FF6600;
+}
+.puzzle-card-price {
+  color: #00FF00;
+  font-size: 20px;
+  font-weight: bold;
+}
+.puzzle-card-img {
+  width: 120px;
+  height: 100px;
+  border: 2px inset #666699;
+  background-color: #000022;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666699;
+  font-size: 11px;
+  text-align: center;
+  float: right;
+  margin: 0 0 10px 12px;
+}
+
+/* ---- BADGES ---- */
+.new-badge {
+  color: #FF0000;
+  font-weight: bold;
+  font-size: 11px;
+  animation: blink 1s step-end infinite;
+}
+@keyframes blink {
+  50% { opacity: 0; }
+}
+.construction {
+  color: #FFFF00;
+  font-size: 12px;
+  animation: blink 1s step-end infinite;
+}
+
+/* ---- DIVIDERS ---- */
+.divider {
+  text-align: center;
+  color: #FFD700;
+  letter-spacing: 4px;
+  margin: 10px 0;
+}
+
+/* ---- FEATURES TABLE ---- */
+.features-table {
+  width: 100%;
+  margin: 10px 0;
+}
+.features-table td {
+  color: #CCCCCC;
+  font-size: 13px;
+  vertical-align: top;
+  padding: 8px;
+}
+.feature-icon {
+  color: #FFD700;
+  font-size: 24px;
+  text-align: center;
+  width: 30px;
+  vertical-align: middle;
+}
+
+/* ---- TESTIMONIALS ---- */
+.testimonial {
+  border-left: 3px solid #FFD700;
+  background-color: #000044;
+  padding: 10px 14px;
+  margin: 10px 0;
+  color: #CCCCCC;
+  font-style: italic;
+  line-height: 1.5;
+}
+.testimonial p { margin: 5px 0; }
+.testimonial-author {
+  text-align: right;
+  font-style: normal;
+  font-weight: bold;
+  color: #FFD700;
+}
+
+/* ---- BUTTONS ---- */
+.guestbook-btn {
+  display: inline-block;
+  border: 3px outset #C0C0C0;
+  background-color: #808080;
+  color: #FFFFFF;
+  padding: 4px 16px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 13px;
+  margin: 5px;
+}
+.guestbook-btn:hover {
+  border-style: inset;
+  color: #FFFF00;
+}
+.action-btn {
+  display: inline-block;
+  border: 3px outset #FFD700;
+  background-color: #333399;
+  color: #FFD700;
+  padding: 6px 20px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 15px;
+}
+.action-btn:hover {
+  border-style: inset;
+  background-color: #222288;
+  color: #FFFF00;
+}
+.submit-btn {
+  border: 3px outset #C0C0C0;
+  background-color: #666699;
+  color: #FFFFFF;
+  padding: 4px 20px;
+  font-weight: bold;
+  font-size: 13px;
+  font-family: "Times New Roman", serif;
+  cursor: pointer;
+}
+.submit-btn:hover {
+  border-style: inset;
+  background-color: #555588;
+}
+.reset-btn {
+  border: 3px outset #C0C0C0;
+  background-color: #808080;
+  color: #FFFFFF;
+  padding: 4px 20px;
+  font-weight: bold;
+  font-size: 13px;
+  font-family: "Times New Roman", serif;
+  cursor: pointer;
+}
+.reset-btn:hover {
+  border-style: inset;
+}
+
+/* ---- FORMS ---- */
+.retro-form input[type="text"],
+.retro-form input[type="email"],
+.retro-form textarea,
+.retro-form select {
+  background-color: #000022;
+  border: 2px inset #C0C0C0;
+  color: #00FF00;
+  font-family: "Courier New", monospace;
+  font-size: 13px;
+  padding: 4px;
+}
+.retro-form textarea {
+  width: 90%;
+  resize: vertical;
+}
+.retro-form td {
+  padding: 4px;
+  color: #CCCCCC;
+  font-size: 13px;
+  vertical-align: top;
+}
+.retro-form .label {
+  color: #FF6600;
+  font-weight: bold;
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* ---- GUESTBOOK ENTRIES ---- */
+.gb-entry {
+  border: 1px solid #666699;
+  background-color: #000044;
+  padding: 10px;
+  margin: 10px 0;
+}
+.gb-entry .gb-header {
+  color: #FF6600;
+  font-weight: bold;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+.gb-entry .gb-date {
+  color: #666699;
+  font-size: 11px;
+  float: right;
+}
+.gb-entry .gb-message {
+  color: #CCCCCC;
+  line-height: 1.5;
+  margin-top: 6px;
+}
+
+/* ---- PAGE TITLE ---- */
+.page-title {
+  text-align: center;
+  margin: 15px 0;
+}
+.page-title h2 {
+  font-family: "Comic Sans MS", "Times New Roman", cursive;
+  color: #FFD700;
+  font-size: 28px;
+  text-shadow: 2px 2px #FF0000;
+  border: none;
+}
+
+/* ---- ABOUT PAGE ---- */
+.about-section {
+  color: #CCCCCC;
+  line-height: 1.7;
+  font-size: 14px;
+}
+.about-section p { margin: 10px 0; }
+
+/* ---- FOOTER ---- */
+.footer {
+  background-color: #333333;
+  text-align: center;
+  padding: 10px;
+  border-top: 3px ridge #C0C0C0;
+  color: #999999;
+  font-size: 11px;
+}
+.counter {
+  font-family: "Courier New", monospace;
+  background-color: #000000;
+  color: #00FF00;
+  padding: 2px 8px;
+  border: 1px inset #666666;
+  font-size: 14px;
+}
