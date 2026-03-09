@@ -1,220 +1,313 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>~*~ Prince of Piece - Bespoke Mechanical Puzzles ~*~</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Prince of Piece - Handcrafted Bespoke Mechanical Puzzles. Puzzle boxes, trick locks, interlocking puzzles, and custom commissions.">
-<link rel="stylesheet" href="style.css">
+  <title>~*~ Prince of Piece - Coming Soon! ~*~</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Prince of Piece - Handcrafted Bespoke Mechanical Puzzles. Coming Soon!">
+  <style>
+    body {
+      background-color: #000080;
+      background-image: url("data:image/svg+xml,%3Csvg width='8' height='8' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='1' height='1' x='0' y='0' fill='%23000066'/%3E%3Crect width='1' height='1' x='4' y='4' fill='%23000066'/%3E%3C/svg%3E");
+      color: #FFFF00;
+      font-family: "Times New Roman", serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: #00FFFF;
+    }
+
+    a:visited {
+      color: #FF00FF;
+    }
+
+    a:hover {
+      color: #FF0000;
+    }
+
+    .main-table {
+      width: 620px;
+      margin: 40px auto;
+      border: 3px ridge #C0C0C0;
+      background-color: #000033;
+    }
+
+    .header {
+      background: linear-gradient(to right, #000033, #000080, #000033);
+      text-align: center;
+      padding: 20px 10px;
+      border-bottom: 3px ridge #C0C0C0;
+    }
+
+    .header h1 {
+      font-family: "Comic Sans MS", "Times New Roman", cursive;
+      color: #FFD700;
+      font-size: 42px;
+      text-shadow: 2px 2px #FF0000;
+      margin: 5px;
+    }
+
+    .header h2 {
+      color: #00FF00;
+      font-size: 18px;
+      font-style: italic;
+      margin: 5px;
+    }
+
+    .star {
+      color: #FFD700;
+    }
+
+    .marquee-bar {
+      background-color: #800000;
+      color: #FFFF00;
+      padding: 5px;
+      font-size: 14px;
+      border-top: 2px inset #C0C0C0;
+      border-bottom: 2px inset #C0C0C0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .marquee-bar .scroll-text {
+      display: inline-block;
+      animation: marquee 18s linear infinite;
+    }
+
+    @keyframes marquee {
+      0% {
+        transform: translateX(100%);
+      }
+
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    .content {
+      text-align: center;
+      padding: 30px 25px;
+    }
+
+    .construction-text {
+      color: #FFFF00;
+      font-size: 28px;
+      font-weight: bold;
+      animation: blink 1s step-end infinite;
+      margin: 15px 0;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+
+    .hard-hat {
+      font-size: 64px;
+      margin: 10px 0;
+    }
+
+    .caution-stripe {
+      height: 20px;
+      background: repeating-linear-gradient(-45deg,
+          #FFD700,
+          #FFD700 10px,
+          #000000 10px,
+          #000000 20px);
+      margin: 15px 0;
+    }
+
+    .divider {
+      text-align: center;
+      color: #FFD700;
+      letter-spacing: 4px;
+      margin: 10px 0;
+    }
+
+    .info-text {
+      color: #CCCCCC;
+      font-size: 15px;
+      line-height: 1.8;
+      margin: 15px 0;
+    }
+
+    .email-box {
+      border: 2px ridge #C0C0C0;
+      background-color: #000044;
+      padding: 15px;
+      margin: 20px auto;
+      display: inline-block;
+    }
+
+    .email-box h3 {
+      color: #FF6600;
+      margin-top: 0;
+    }
+
+    .email-field {
+      background-color: #000022;
+      border: 2px inset #C0C0C0;
+      color: #00FF00;
+      font-family: "Courier New", monospace;
+      font-size: 14px;
+      padding: 5px;
+      width: 220px;
+    }
+
+    .submit-btn {
+      border: 3px outset #C0C0C0;
+      background-color: #666699;
+      color: #FFFFFF;
+      padding: 5px 18px;
+      font-weight: bold;
+      font-size: 14px;
+      font-family: "Times New Roman", serif;
+      cursor: pointer;
+      margin-left: 5px;
+    }
+
+    .submit-btn:hover {
+      border-style: inset;
+      background-color: #555588;
+    }
+
+    .counter-text {
+      font-family: "Courier New", monospace;
+      background-color: #000000;
+      color: #00FF00;
+      padding: 2px 8px;
+      border: 1px inset #666666;
+      font-size: 14px;
+    }
+
+    .footer {
+      background-color: #333333;
+      text-align: center;
+      padding: 12px;
+      border-top: 3px ridge #C0C0C0;
+      color: #999999;
+      font-size: 11px;
+    }
+
+    .badge-row {
+      margin: 15px 0;
+    }
+
+    .badge {
+      display: inline-block;
+      border: 2px outset #C0C0C0;
+      background-color: #808080;
+      color: #FFFFFF;
+      padding: 3px 10px;
+      font-size: 10px;
+      font-weight: bold;
+      margin: 3px;
+    }
+
+    .contact-link {
+      color: #00FFFF;
+      font-size: 16px;
+    }
+  </style>
 </head>
+
 <body>
 
-<table class="main-table" cellpadding="0" cellspacing="0">
-<tr><td>
+  <table class="main-table" cellpadding="0" cellspacing="0">
+    <tr>
+      <td>
 
-  <!-- HEADER -->
-  <div class="header">
-    <p class="star">* * * * * * * * * * * * * * * * * * * *</p>
-    <h1>Prince of Piece</h1>
-    <h2>~ Bespoke Mechanical Puzzles ~</h2>
-    <p style="color:#CCCCCC; font-size:13px;">Handcrafted Brain-Teasers for the Discerning Puzzle Enthusiast</p>
-    <p class="star">* * * * * * * * * * * * * * * * * * * *</p>
-  </div>
+        <!-- HEADER -->
+        <div class="header">
+          <p class="star">* * * * * * * * * * * * * * * * * * * *</p>
+          <h1>Prince of Piece</h1>
+          <h2>~ Bespoke Mechanical Puzzles ~</h2>
+          <p style="color:#CCCCCC; font-size:13px;">Handcrafted Brain-Teasers for the Discerning Puzzle Enthusiast</p>
+          <p class="star">* * * * * * * * * * * * * * * * * * * *</p>
+        </div>
 
-  <!-- MARQUEE -->
-  <div class="marquee-bar">
-    <span class="scroll-text">*** WELCOME to Prince of Piece! *** NEW: The Labyrinth Box Series is NOW AVAILABLE! *** Free shipping on orders over $150! *** Each puzzle is handcrafted and unique! *** Call 1-800-PUZZLES for custom orders! ***</span>
-  </div>
+        <!-- MARQUEE -->
+        <div class="marquee-bar">
+          <span class="scroll-text">*** OUR NEW WEBSITE IS COMING SOON! *** Stay tuned for handcrafted mechanical
+            puzzles! *** Puzzle boxes, packers, interlocking puzzles and more! *** Email us to be notified when we
+            launch! ***</span>
+        </div>
 
-  <!-- NAVIGATION -->
-  <div class="navbar">
-    <a href="index.html" class="nav-active">HOME</a>
-    <a href="puzzles.html">PUZZLES</a>
-    <a href="custom.html">CUSTOM ORDERS</a>
-    <a href="about.html">ABOUT US</a>
-    <a href="guestbook.html">GUESTBOOK</a>
-    <a href="contact.html">CONTACT</a>
-  </div>
+        <!-- CONTENT -->
+        <div class="content">
+          <div class="caution-stripe"></div>
 
-  <!-- CONTENT -->
-  <div class="content-area">
-    <!-- SIDEBAR -->
-    <div class="sidebar">
-      <h3>What's New!</h3>
-      <ul>
-        <li><a href="puzzles.html#labyrinth">Labyrinth Box</a> <span class="new-badge">NEW!</span></li>
-        <li><a href="puzzles.html#gearsphere">Gear Sphere v3</a></li>
-        <li><a href="puzzles.html#slidingstars">Sliding Stars</a></li>
-        <li><a href="puzzles.html#enigma">The Enigma Lock</a> <span class="new-badge">NEW!</span></li>
-      </ul>
+          <div class="hard-hat">&#9888;</div>
 
-      <h3>Categories</h3>
-      <ul>
-        <li><a href="puzzles.html#sequential">Sequential</a></li>
-        <li><a href="puzzles.html#interlocking">Interlocking</a></li>
-        <li><a href="puzzles.html#boxes">Puzzle Boxes</a></li>
-        <li><a href="puzzles.html#locks">Trick Locks</a></li>
-        <li><a href="puzzles.html#mazes">Mazes</a></li>
-      </ul>
+          <div class="construction-text">*** UNDER CONSTRUCTION ***</div>
 
-      <h3>Links</h3>
-      <ul>
-        <li><a href="#">Puzzle Ring</a></li>
-        <li><a href="#">Puzzle Forum</a></li>
-        <li><a href="#">Cool Sites!</a></li>
-      </ul>
+          <div class="caution-stripe"></div>
 
-      <br>
-      <p style="text-align:center;">
-        <a href="guestbook.html" class="guestbook-btn">Sign our Guestbook!</a>
-      </p>
-      <br>
-      <p style="text-align:center; font-size:11px; color:#999;">
-        Best viewed with<br>
-        <b style="color:#00FF00;">Netscape Navigator 3.0+</b><br>
-        at 800x600
-      </p>
-    </div>
+          <div class="divider">-=*=- -=*=- -=*=- -=*=- -=*=-</div>
 
-    <!-- MAIN -->
-    <div class="main-content">
-      <h2>Welcome, Puzzle Lovers!</h2>
-      <p style="color:#CCCCCC; line-height:1.6;">
-        Welcome to <b style="color:#FFD700;">Prince of Piece</b>, the Internet's premier destination for
-        handcrafted mechanical puzzles! Every puzzle in our collection is designed and built by hand
-        using the finest woods, metals, and materials. No two puzzles are exactly alike!
-      </p>
-      <p style="color:#CCCCCC; line-height:1.6;">
-        Since 1993, our master craftsmen have been creating puzzles that challenge the mind and
-        delight the senses. From intricate puzzle boxes with dozens of hidden moves to elegant
-        trick locks that guard their secrets jealously, each creation is a work of art and
-        engineering.
-      </p>
+          <p class="info-text">
+            Our website is currently being built!<br>
+            We're working hard to bring you the Internet's premier<br>
+            destination for <b style="color:#FFD700;">handcrafted mechanical puzzles</b>.
+          </p>
 
-      <div class="divider">-=*=- -=*=- -=*=- -=*=- -=*=-</div>
+          <p class="info-text">
+            <b style="color:#FF6600;">Coming soon:</b><br>
+            Full puzzle catalogue &bull; Custom order information<br>
+            Workshop tour &bull; Photo gallery &bull; Guestbook
+          </p>
 
-      <h2>Featured Puzzles</h2>
-      <table class="puzzle-table">
-        <tr>
-          <th>Puzzle</th>
-          <th>Type</th>
-          <th>Difficulty</th>
-          <th>Price</th>
-        </tr>
-        <tr>
-          <td><b style="color:#FFD700;">The Labyrinth Box</b> <span class="new-badge">NEW!</span><br>
-            <i>A stunning 47-move sequential discovery puzzle box crafted from walnut and brass.</i></td>
-          <td>Puzzle Box</td>
-          <td>***** (Expert)</td>
-          <td style="color:#00FF00;">$285.00</td>
-        </tr>
-        <tr>
-          <td><b style="color:#FFD700;">Gear Sphere Mark III</b><br>
-            <i>Interlocking gear mechanism encased in a polished steel sphere. 12 pieces.</i></td>
-          <td>Interlocking</td>
-          <td>**** (Advanced)</td>
-          <td style="color:#00FF00;">$195.00</td>
-        </tr>
-        <tr>
-          <td><b style="color:#FFD700;">The Enigma Lock</b> <span class="new-badge">NEW!</span><br>
-            <i>A cryptographic trick lock requiring 5 hidden steps to open.</i></td>
-          <td>Trick Lock</td>
-          <td>**** (Advanced)</td>
-          <td style="color:#00FF00;">$145.00</td>
-        </tr>
-        <tr>
-          <td><b style="color:#FFD700;">Sliding Stars</b><br>
-            <i>Hand-cut sliding tile puzzle with inlaid star pattern. Cherry &amp; maple.</i></td>
-          <td>Sequential</td>
-          <td>*** (Intermediate)</td>
-          <td style="color:#00FF00;">$120.00</td>
-        </tr>
-        <tr>
-          <td><b style="color:#FFD700;">The Wanderer's Maze</b><br>
-            <i>A tilting marble maze carved from a single block of oak. Ball-bearing mechanism.</i></td>
-          <td>Maze</td>
-          <td>*** (Intermediate)</td>
-          <td style="color:#00FF00;">$165.00</td>
-        </tr>
-      </table>
+          <div class="divider">-=*=- -=*=- -=*=- -=*=- -=*=-</div>
 
-      <p style="text-align:center; margin-top:15px;">
-        <a href="puzzles.html" class="action-btn">>>> View Full Catalogue <<<</a>
-      </p>
+          <!-- EMAIL SIGNUP -->
+          <div class="email-box">
+            <h3>Get Notified When We Launch!</h3>
+            <p style="color:#CCCCCC; font-size:13px; margin:5px 0 10px 0;">
+              Enter your email and we'll let you know when the site is ready:
+            </p>
+            <form>
+              <input type="text" class="email-field" placeholder="your@email.com">
+              <input type="submit" value="Notify Me!" class="submit-btn">
+            </form>
+          </div>
 
-      <div class="divider">-=*=- -=*=- -=*=- -=*=- -=*=-</div>
+          <div class="divider">-=*=- -=*=- -=*=- -=*=- -=*=-</div>
 
-      <h2>Why Choose Prince of Piece?</h2>
-      <table class="features-table" cellpadding="8">
-        <tr>
-          <td class="feature-icon">&#9734;</td>
-          <td><b style="color:#FFD700;">Handcrafted</b><br><span style="color:#CCCCCC;">Every single puzzle is made by hand in our Portland, Oregon workshop. No mass production, ever.</span></td>
-          <td class="feature-icon">&#9734;</td>
-          <td><b style="color:#FFD700;">Premium Materials</b><br><span style="color:#CCCCCC;">We use select hardwoods, precision metals, and the finest materials available.</span></td>
-        </tr>
-        <tr>
-          <td class="feature-icon">&#9734;</td>
-          <td><b style="color:#FFD700;">Unique Designs</b><br><span style="color:#CCCCCC;">Original mechanisms designed in-house. You won't find these puzzles anywhere else.</span></td>
-          <td class="feature-icon">&#9734;</td>
-          <td><b style="color:#FFD700;">Custom Orders</b><br><span style="color:#CCCCCC;">Need something special? We build bespoke puzzles to your exact specifications.</span></td>
-        </tr>
-      </table>
+          <p class="info-text">
+            In the meantime, you can reach us at:<br>
+            <a href="mailto:andy@princeofpiece.com" class="contact-link">andy@princeofpiece.com</a><br>
+          </p>
 
-      <div class="divider">-=*=- -=*=- -=*=- -=*=- -=*=-</div>
+          <div class="divider">-=*=- -=*=- -=*=- -=*=- -=*=-</div>
 
-      <h2>Customer Testimonials</h2>
-      <div class="testimonial">
-        <p>"The Labyrinth Box took me three weeks to solve. When it finally opened, I
-        actually applauded. This is puzzle-making elevated to fine art."</p>
-        <p class="testimonial-author">-- Gerald K., Cambridge, MA</p>
-      </div>
-      <div class="testimonial">
-        <p>"I ordered a custom engagement ring box. The look on her face when she had to solve
-        the puzzle to find the ring was absolutely priceless. Worth every penny."</p>
-        <p class="testimonial-author">-- Thomas R., Portland, OR</p>
-      </div>
-      <div class="testimonial">
-        <p>"As a puzzle collector for 20 years, I can say without hesitation that Prince of Piece
-        creates some of the finest mechanical puzzles in the world today."</p>
-        <p class="testimonial-author">-- Dr. Susan M., London, UK</p>
-      </div>
+          <div class="badge-row">
+            <span class="badge">Netscape Now!</span>
+            <span class="badge">HTML 3.2</span>
+            <span class="badge">Made on a Mac</span>
+          </div>
 
-      <div class="divider">-=*=- -=*=- -=*=- -=*=- -=*=-</div>
+          <p style="color:#999999; font-size:11px;">
+            Best viewed with <b style="color:#00FF00;">Netscape Navigator 3.0+</b> at 800x600
+          </p>
+        </div>
 
-      <h2>Custom Orders</h2>
-      <p style="color:#CCCCCC; line-height:1.6;">
-        We specialize in <b style="color:#FF6600;">bespoke puzzle commissions</b>! Whether you need a
-        corporate gift, a one-of-a-kind engagement ring box, or a competition-grade puzzle, we can
-        build it. <a href="custom.html">Click here</a> to learn more, or email us at
-        <a href="mailto:puzzles@princeofpiece.com">puzzles@princeofpiece.com</a>.
-      </p>
+        <!-- FOOTER -->
+        <div class="footer">
+          <hr style="border: 1px ridge #666666;">
+          <p>Copyright &copy; 1997 Prince of Piece. All rights reserved.</p>
+          <p>You are visitor number: <span class="counter-text">000,042</span></p>
+          <p>Last updated: March 9, 1997 | <a href="mailto:andy@princeofpiece.com" style="color:#9999FF;">Email the
+              Webmaster</a></p>
+        </div>
 
-      <p style="color:#CCCCCC;">
-        <span class="construction">*** UNDER CONSTRUCTION ***</span> - Photo gallery page coming soon!
-      </p>
-    </div>
-  </div>
-
-  <!-- FOOTER -->
-  <div class="footer">
-    <hr style="border: 1px ridge #666666;">
-    <p>
-      <a href="index.html" style="color:#9999FF;">Home</a> |
-      <a href="puzzles.html" style="color:#9999FF;">Puzzles</a> |
-      <a href="custom.html" style="color:#9999FF;">Custom Orders</a> |
-      <a href="about.html" style="color:#9999FF;">About</a> |
-      <a href="guestbook.html" style="color:#9999FF;">Guestbook</a> |
-      <a href="contact.html" style="color:#9999FF;">Contact</a>
-    </p>
-    <p>Copyright &copy; 1997 Prince of Piece. All rights reserved.</p>
-    <p>You are visitor number: <span class="counter">002,847</span></p>
-    <p>Last updated: March 9, 1997 | <a href="mailto:webmaster@princeofpiece.com" style="color:#9999FF;">Email the Webmaster</a></p>
-    <p style="color:#666666;">This site is a member of the <a href="#" style="color:#9999FF;">Puzzle Enthusiasts Web Ring</a> |
-    <a href="#" style="color:#9999FF;">[Prev]</a> | <a href="#" style="color:#9999FF;">[Next]</a> | <a href="#" style="color:#9999FF;">[Random]</a></p>
-  </div>
-
-</td></tr>
-</table>
+      </td>
+    </tr>
+  </table>
 
 </body>
+
 </html>
